@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="/resources/labheader/css/academyLabHeader.css" rel="stylesheet">
+    <link href="/resources/css/labs.css" rel="stylesheet">
+    <title>Username enumeration via account lock</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script> <!-- Include Google reCAPTCHA API -->
+</head>
+<body>
+    <script src="/resources/labheader/js/labHeader.js"></script>
+    <div id="academyLabHeader">
+        <!-- Header code -->
+    </div>
+    <div theme="">
+        <section class="maincontainer">
+            <div class="container is-page">
+                <header class="navigation-header">
+                    <!-- Navigation header code -->
+                </header>
+                <header class="notification-header">
+                    <!-- Notification header code -->
+                </header>
+                <h1>Login</h1>
+                <section>
+                    <p class="is-warning">Invalid username or password.</p>
+                    <form class="login-form" method="POST" action="/login">
+                        <label>Username</label>
+                        <input required type="text" name="username" autofocus>
+                        <label>Password</label>
+                        <input required type="password" name="password">
+                        <!-- Add reCAPTCHA -->
+                        <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+                        <button class="button" type="submit">Log in</button>
+                    </form>
+                </section>
+            </div>
+        </section>
+        <div class="footer-wrapper">
+            <!-- Footer code -->
+        </div>
+    </div>
+</body>
+</html>
